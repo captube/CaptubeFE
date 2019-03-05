@@ -1,0 +1,19 @@
+.LogoComponent div {
+    display: inline-block;
+    font-size: 50px;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.LogoComponent div.CapDiv {
+    color: #707070;
+}
+
+.LogoComponent div.TubeDiv {
+    color: #ffffff;
+    border-radius: 15px;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-image: radial-gradient(#FF3C3C 0%, #E60505 100%);
+}
