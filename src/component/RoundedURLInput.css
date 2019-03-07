@@ -47,7 +47,7 @@
 }
 
 .MainLayout .captureBtnDiv {
-
+    cursor: pointer;
     height: 100%;
     margin-left: 93%;
     margin-top: 0.2%;
