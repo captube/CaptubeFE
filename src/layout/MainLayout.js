@@ -22,7 +22,7 @@ class MainLayout extends Component {
                 <div className="MainLayout">
                     <LogoComponent/>
                     <div className="searchDiv">
-                        <RoundedURLInput/>
+                        <RoundedURLInput buttonAttach={true}/>
                     </div>
                     <div className="captureOption">
                         <div className="title">Capture option</div>
