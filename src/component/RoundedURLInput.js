@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './RoundedURLInput.css';
+import captureButtonSVG from "../res/capture.svg";
 
 class RoundedURLInput extends Component {
 
@@ -13,6 +14,7 @@ class RoundedURLInput extends Component {
                         }
                     }} type="url" placeholder="CTRL+V URL"></input>
                     <div className="captureBtnDiv">
+                        <img src={captureButtonSVG} className="captureImageButton"/>
                     </div>
                 </div>
             </div>

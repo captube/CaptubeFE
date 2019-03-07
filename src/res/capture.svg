@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.029 59.906">
+    <defs>
+        <style>
+            .cls-1{fill:#929292}.cls-2{fill:#fff}.cls-3{filter:url(#사각형_2)}
+        </style>
+        <filter id="사각형_2" width="71.029" height="59.906" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="그룹_14" data-name="그룹 14" transform="translate(-1382.432 -354.892)">
+        <g id="그룹_9" class="cls-3" data-name="그룹 9" transform="translate(1382.432 354.892)">
+            <rect id="사각형_2-2" width="53.029" height="41.906" class="cls-1" data-name="사각형 2" rx="15" transform="translate(9 6)"/>
+        </g>
+        <g id="그룹_10" data-name="그룹 10" transform="translate(20.728 4.974)">
+            <path id="사각형_40" d="M0 0h9.461v1.234H0z" class="cls-2" data-name="사각형 40" transform="rotate(90 514.071 885.009)"/>
+            <path id="사각형_41" d="M0 0h9.461v1.234H0z" class="cls-2" data-name="사각형 41" transform="rotate(180 701.596 188.143)"/>
+            <path id="사각형_44" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 44" transform="translate(1385 365)"/>
+            <path id="사각형_45" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 45" transform="rotate(-90 886.526 -498.474)"/>
+            <path id="사각형_46" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 46" transform="rotate(90 512.794 877.794)"/>
+            <path id="사각형_47" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 47" transform="translate(1385 382.464)"/>
+            <path id="사각형_38" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 38" transform="rotate(180 705.423 194.026)"/>
+            <path id="사각형_42" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 42" transform="rotate(90 523.273 888.273)"/>
+            <path id="사각형_39" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 39" transform="rotate(-90 896.655 -508.603)"/>
+            <path id="사각형_43" d="M0 0h1.397v5.588H0z" class="cls-2" data-name="사각형 43" transform="rotate(180 705.773 185.294)"/>
+        </g>
+    </g>
+</svg>

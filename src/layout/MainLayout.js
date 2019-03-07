@@ -3,13 +3,16 @@ import './MainLayout.css';
 import LogoComponent from "../component/LogoComponent";
 import RoundedURLInput from "../component/RoundedURLInput";
 import ToggleButton from "../component/ToggleButton";
+import captureButtonSVG from '../res/capture.svg';
 
 class MainLayout extends Component {
     render() {
         return (
             <div className="MainLayout">
                 <LogoComponent/>
-                <RoundedURLInput/>
+                <div className="searchDiv">
+                    <RoundedURLInput/>
+                </div>
                 <div className="captureOption">
                     <div className="title">Capture option</div>
                     <div className="optionList">
@@ -18,7 +21,7 @@ class MainLayout extends Component {
                                 유튜브 자막 추가
                             </div>
                             <div className="toggleButton">
-                            <ToggleButton/>
+                                <ToggleButton/>
                             </div>
                         </div>
                     </div>
