@@ -5,3 +5,53 @@
 .MainLayout .LogoComponent {
     margin: 3%;
 }
+
+.MainLayout .captureOption {
+    text-align: center;
+    width: 34%;
+    padding: 1%;
+    margin-left: 33%;
+    margin-top: 12%;
+}
+
+.MainLayout .captureOption .title {
+    text-align: left;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    color: #b5b5b5;
+}
+
+.MainLayout .captureOption .optionList {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top: 2px solid #dfe1e5;
+    border-bottom: 2px solid #dfe1e5;
+}
+
+.MainLayout .captureOption .optionList .optionItem {
+    overflow: hidden;
+}
+
+.MainLayout .captureOption .optionItem .optionName {
+    object-fit: contain;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    letter-spacing: normal;
+    float: left;
+    color: #8d8d8d;
+}
+
+.MainLayout .captureOption .optionItem .toggleButton {
+    float: right;
+}
