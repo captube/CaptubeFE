@@ -2,13 +2,12 @@
     position: absolute;
     width: 50%;
     height: 5%;
-    margin-left: 25%;
 }
 
 .RoundedURLInput .searchBarWrapper {
     border-radius: 16px;
     width: 100%;
-    height: 100%;
+    height: 50px;
     border: 1px solid #dfe1e5;
     box-shadow: none;
 }
@@ -49,12 +48,12 @@
 .MainLayout .captureBtnDiv {
     cursor: pointer;
     height: 100%;
-    margin-left: 93%;
-    margin-top: 0.2%;
+    right: 0px;
+    margin-top: 2px;
     position: absolute;
 }
 
 .MainLayout .captureBtnDiv .captureImageButton {
-    max-width: 100%;
-    height: 100%;
+    max-width: 140px;
+    height: 50px;
 }
