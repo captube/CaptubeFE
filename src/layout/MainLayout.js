@@ -13,18 +13,46 @@ class MainLayout extends Component {
 
         this.state = {
             status: "init",
-            url: ""
+            url: "",
+            imgs: []
         }
     }
 
     render() {
-        if (this.state.status == "init")
+        if (this.state.status == "init") {
+
             return (
                 <div className="MainLayout">
                     <div className="InitLayout">
                         <LogoComponent/>
                         <div className="searchDiv">
                             <RoundedURLInput buttonAttach={true} onButtonClick={(url) => {
+
+                                let subToggleButtonInput = window.document.querySelector(".InitLayout .captureOption .ToggleButton input");
+
+                                let header = new Headers();
+                                header.append("Content-Type","application/json");
+
+                                let body = {
+                                    url: url,
+                                    responseEncodingType : "base64",
+                                    language: "en",
+                                    noSub: !subToggleButtonInput.checked
+                                }
+
+                                let init = {
+                                    method: 'POST',
+                                    headers: header,
+                                    body: JSON.stringify(body)
+                                }
+                                fetch("/api/v1/capture/getImages",init)
+                                    .then(async (response) =>{
+                                        let result = await response.json();
+                                        this.setState({status:"result", imgs:result})
+                                    })
+                                    .catch((err)=>{
+                                        window.alert("캡쳐에 실패 했습니다");
+                                    });
                                 let youtubeId = this.getYoutubeIdFromURL(url)
                                 this.setState({
                                     status: "loading",
@@ -48,6 +76,7 @@ class MainLayout extends Component {
                     </div>
                 </div>
             );
+        }
         else if (this.state.status == "loading")
 
             return (
@@ -113,6 +142,14 @@ class MainLayout extends Component {
                             <div className="TipText">
                                 이미지를 클릭하면 해당 페이지부터 유튜브 재생이 가능합니다
                             </div>
+                        </div>
+                        <div className="ImageSection">
+                            {
+                                this.state.imgs.map((img) => {
+                                        return (<img className="CaptureImage" src={"data:image/jpg;base64," + img.data}/>);
+                                    }
+                                )
+                            }
                         </div>
                     </div>
                 </div>
