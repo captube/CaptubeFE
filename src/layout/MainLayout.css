@@ -97,6 +97,7 @@
 .MainLayout .ResultLayout .TopLayout {
     position: fixed;
     width: 80%;
+    top: 0;
 }
 
 .MainLayout .ResultLayout .TopLayout div {
@@ -144,6 +145,7 @@
 
 .MainLayout .RightLayout {
     position: fixed;
+    top: 0;
     right: 0;
     margin-top: 3%;
     width: 30%;
