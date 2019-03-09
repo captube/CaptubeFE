@@ -102,7 +102,9 @@ class MainLayout extends Component {
                                 <div className="SectionContents"></div>
                             </div>
                             <div className="ButtonSection">
-                                <div className="Button">RECAPTURE</div>
+                                <div className="Button" onClick={() => {
+                                    this.requestImage(this.state.url);
+                                }}>RECAPTURE</div>
                                 <div className="Button">DOWNLOAD ALL</div>
                             </div>
                         </div>
