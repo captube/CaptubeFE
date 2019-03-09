@@ -1,8 +1,19 @@
-.MainLayout {
+.MainLayout .InitLayout, .LoadingLayout {
     margin-top: 10%;
 }
 
-.MainLayout .LogoComponent {
+
+.MainLayout .InitLayout .searchDiv {
+    margin-left: 25%;
+    width: 53.5%;
+}
+
+.MainLayout .LoadingLayout .searchDiv {
+    margin-left: 25%;
+    width: 53.5%;
+}
+
+.MainLayout .LogoComponent, .LoadingLayout {
     margin: 3%;
 }
 
@@ -78,7 +89,127 @@
     border: none;
     width: 80%;
     height: 75%;
-    top:16%;
+    top: 16%;
     left: 10%;
     position: absolute;
+}
+
+.MainLayout .ResultLayout .TopLayout {
+    width: 80%;
+}
+
+.MainLayout .ResultLayout .TopLayout div {
+    float: left;
+}
+
+.MainLayout .ResultLayout .RoundedURLInput {
+    width: 50%;
+    height: 5%;
+    margin-top: 3%;
+}
+
+.MainLayout .TipLayout {
+    width: 400px;
+    border-radius: 6px;
+    background-color: #ffe22c;
+    position: absolute;
+    left: 3%;
+    bottom: 3%;
+}
+
+.MainLayout .TipLayout .TipTitle {
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #650000;
+    margin: 10px;
+}
+
+.MainLayout .TipLayout .TipText {
+    font-family: YDIYGO310;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #650000;
+    margin: 10px;
+}
+
+.MainLayout .RightLayout {
+    position: absolute;
+    right: 0;
+    margin-top: 3%;
+    width: 30%;
+}
+
+
+.MainLayout .RightLayout .SectionTitle {
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 3%;
+    color: #b5b5b5;
+}
+
+.MainLayout .RightLayout .ClipSection, .OptionSection, .NavigationSection {
+    width: 100%;
+    height: 170.5px;
+    margin-top: 1%;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+
+.MainLayout .RightLayout .ButtonSection {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.MainLayout .RightLayout .OptionList .Option div {
+    float: left;
+}
+
+.MainLayout .RightLayout .OptionList .Option .ToggleButton {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.MainLayout .RightLayout .OptionList .Option .OptionName {
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b5b5b5;
+}
+
+.MainLayout .RightLayout .ButtonSection .Button {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 45%;
+    margin: 3%;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    font-family: Arial;
+    color: #ffffff;
+    background-color: #00B800;
+    border-radius: 15px;
 }
