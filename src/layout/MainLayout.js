@@ -16,7 +16,8 @@ class MainLayout extends Component {
             status: "init",
             embedUrl: "",
             url: "",
-            imgs: []
+            imgs: [],
+            title: ""
         }
     }
 
@@ -83,7 +84,7 @@ class MainLayout extends Component {
                         <div className="RightLayout">
                             <div className="ClipSection">
                                 <div className="SectionTitle">CLIP INFORMATION</div>
-                                <div className="SectionContents"></div>
+                                <div className="SectionContents">{this.state.title}</div>
                             </div>
                             <div className="OptionSection">
                                 <div className="SectionTitle">CAPTION OPTION</div>
@@ -98,7 +99,14 @@ class MainLayout extends Component {
                             </div>
                             <div className="NavigationSection">
                                 <div className="SectionTitle">CAPTION NAVIGATION</div>
-                                <div className="SectionContents"></div>
+                                <div className="SectionContents">{this.state.imgs.map((img) => {
+                                    return (
+                                    <div>
+                                        {img.script}
+                                    </div>
+                                        );
+                                })
+                                }</div>
                             </div>
                             <div className="ButtonSection">
                                 <div className="Button" onClick={() => {
@@ -171,7 +179,7 @@ class MainLayout extends Component {
         fetch("/api/v1/capture/getImages", init)
             .then(async (response) => {
                 let result = await response.json();
-                this.setState({status: "result", imgs: result})
+                this.setState({status: "result", imgs: result.captureItems, title: result.title})
             })
             .catch((err) => {
                 window.alert("캡쳐에 실패 했습니다");

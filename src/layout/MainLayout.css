@@ -2,7 +2,6 @@
     margin-top: 10%;
 }
 
-
 .MainLayout .InitLayout .searchDiv {
     margin-left: 25%;
     width: 53.5%;
@@ -151,7 +150,6 @@
     width: 30%;
 }
 
-
 .MainLayout .RightLayout .SectionTitle {
     font-family: Arial;
     font-size: 25px;
@@ -172,6 +170,14 @@
     background-color: #ffffff;
 }
 
+.MainLayout .RightLayout .NavigationSection {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.MainLayout .RightLayout .NavigationSection::-webkit-scrollbar {
+    display: none;
+}
 
 .MainLayout .RightLayout .ButtonSection {
     display: inline-flex;
