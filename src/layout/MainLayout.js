@@ -99,12 +99,18 @@ class MainLayout extends Component {
                             </div>
                             <div className="NavigationSection">
                                 <div className="SectionTitle">CAPTION NAVIGATION</div>
-                                <div className="SectionContents">{this.state.imgs.map((img) => {
+                                <div className="SectionContents">{this.state.imgs.map((img, index) => {
                                     return (
-                                    <div>
-                                        {img.script}
-                                    </div>
-                                        );
+                                        <div idx={index} onClick={(ev) => {
+                                            let idx = ev.target.getAttribute("idx");
+                                            let imgTags = document.querySelector(".MainLayout .ResultLayout .ImageSection");
+                                            imgTags = imgTags.children;
+                                            let scrollPosition = imgTags[idx].offsetTop;
+                                            window.scrollTo(window.screen.width / 2, scrollPosition);
+                                        }}>
+                                            {img.script}
+                                        </div>
+                                    );
                                 })
                                 }</div>
                             </div>
@@ -131,7 +137,8 @@ class MainLayout extends Component {
                                     // Cleanup the DOM
                                     document.body.removeChild(link);
 
-                                }}>DOWNLOAD ALL</div>
+                                }}>DOWNLOAD ALL
+                                </div>
                             </div>
                         </div>
                         <div className="TipLayout">
@@ -145,7 +152,15 @@ class MainLayout extends Component {
                         <div className="ImageSection">
                             {
                                 this.state.imgs.map((img) => {
-                                        return (<img className="CaptureImage" src={"data:image/jpg;base64," + img.data}/>);
+                                        return (<img className="CaptureImage" src={"data:image/jpg;base64," + img.data}
+                                                     timestamp={img.startTime}
+                                                     onClick={(ev) => {
+                                                         let timeStamp = ev.target.getAttribute("timestamp");
+                                                         let min = Math.floor(timeStamp / 60);
+                                                         let sec = timeStamp % 60;
+                                                         window.open(this.state.url+"&t="+min+"m"+sec+"s");
+                                                     }
+                                                     }/>);
                                     }
                                 )
                             }
