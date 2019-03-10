@@ -5,6 +5,7 @@ import RoundedURLInput from "../component/RoundedURLInput";
 import ToggleButton from "../component/ToggleButton";
 import captureButtonSVG from '../res/capture.svg';
 import youtubeBG from "../res/bg_youtube.png";
+import JSZip from "../lib/jszip";
 
 class MainLayout extends Component {
 
@@ -51,8 +52,7 @@ class MainLayout extends Component {
                     </div>
                 </div>
             );
-        }
-        else if (this.state.status == "loading") {
+        } else if (this.state.status == "loading") {
             return (
                 <div className="MainLayout">
                     <div className="LoadingLayout">
@@ -68,8 +68,7 @@ class MainLayout extends Component {
                     </div>
                 </div>
             );
-        }
-        else {
+        } else {
             return (
                 <div className="MainLayout">
                     <div className="ResultLayout">
@@ -104,8 +103,19 @@ class MainLayout extends Component {
                             <div className="ButtonSection">
                                 <div className="Button" onClick={() => {
                                     this.requestImage(this.state.url);
-                                }}>RECAPTURE</div>
-                                <div className="Button">DOWNLOAD ALL</div>
+                                }}>RECAPTURE
+                                </div>
+                                <a className="Button" onClick={(event) => {
+                                    let zip = new JSZip();
+                                    this.state.imgs.map((img) => {
+                                        zip.add(img.fileName, img.data, {base64: true});
+                                    });
+                                    let content = zip.generate();
+                                    let uri = "data:application/zip;base64," + content;
+                                    let blob = window.URL.createObjectURL(this.dataURItoBlob(uri));
+                                    event.target.href = blob
+                                    event.target.download = "captube.zip";
+                                }}>DOWNLOAD ALL</a>
                             </div>
                         </div>
                         <div className="TipLayout">
@@ -132,16 +142,17 @@ class MainLayout extends Component {
 
     requestImage(url) {
         let subToggleButtonInput = window.document.querySelector(".InitLayout .captureOption .ToggleButton input");
-        subToggleButtonInput = subToggleButtonInput? subToggleButtonInput : window.document.querySelector(".ResultLayout .ToggleButton input");
+        subToggleButtonInput = subToggleButtonInput ? subToggleButtonInput : window.document.querySelector(".ResultLayout .ToggleButton input");
 
         let header = new Headers();
-        header.append("Content-Type","application/json");
+        header.append("Content-Type", "application/json");
 
         let body = {
             url: url,
-            responseEncodingType : "base64",
+            responseEncodingType: "base64",
             language: "en",
             noSub: !subToggleButtonInput.checked
+
         }
 
         let init = {
@@ -149,12 +160,12 @@ class MainLayout extends Component {
             headers: header,
             body: JSON.stringify(body)
         }
-        fetch("/api/v1/capture/getImages",init)
-            .then(async (response) =>{
+        fetch("/api/v1/capture/getImages", init)
+            .then(async (response) => {
                 let result = await response.json();
-                this.setState({status:"result", imgs:result})
+                this.setState({status: "result", imgs: result})
             })
-            .catch((err)=>{
+            .catch((err) => {
                 window.alert("캡쳐에 실패 했습니다");
             });
         let youtubeId = this.getYoutubeIdFromURL(url)
@@ -175,6 +186,26 @@ class MainLayout extends Component {
             id = url;
         }
         return id;
+    }
+
+    dataURItoBlob(dataURI, callback) {
+        // convert base64 to raw binary data held in a string
+        // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+        let byteString = atob(dataURI.split(',')[1]);
+
+        // separate out the mime component
+        let mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+        // write the bytes of the string to an ArrayBuffer
+        let ab = new ArrayBuffer(byteString.length);
+        let ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+
+        // write the ArrayBuffer to a blob, and you're done
+        let bb = new Blob([ab]);
+        return bb;
     }
 }
 
