@@ -105,17 +105,25 @@ class MainLayout extends Component {
                                     this.requestImage(this.state.url);
                                 }}>RECAPTURE
                                 </div>
-                                <a className="Button" onClick={(event) => {
+                                <div className="Button" onClick={(event) => {
                                     let zip = new JSZip();
                                     this.state.imgs.map((img) => {
                                         zip.add(img.fileName, img.data, {base64: true});
                                     });
+                                    let link = document.createElement("a");
                                     let content = zip.generate();
                                     let uri = "data:application/zip;base64," + content;
                                     let blob = window.URL.createObjectURL(this.dataURItoBlob(uri));
-                                    event.target.href = blob
-                                    event.target.download = "captube.zip";
-                                }}>DOWNLOAD ALL</a>
+                                    link.href = blob
+                                    link.download = "captube.zip";
+
+                                    document.body.appendChild(link);
+                                    link.click();
+
+                                    // Cleanup the DOM
+                                    document.body.removeChild(link);
+
+                                }}>DOWNLOAD ALL</div>
                             </div>
                         </div>
                         <div className="TipLayout">
