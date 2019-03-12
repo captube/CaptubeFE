@@ -76,7 +76,7 @@
 .MainLayout .YoutubePreview {
     width: 80%;
     height: 70%;
-    margin-left: 10%;
+    left: 9%;
     padding: 1%;
     margin-top: 5%;
     position: absolute;
@@ -84,9 +84,9 @@
 
 .MainLayout .YoutubePreview img {
     z-index: 0;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    left: 5%;
+    left: 0;
     position: absolute;
 }
 
