@@ -60,7 +60,7 @@ class MainLayout extends Component {
                         <LogoComponent/>
                         <div className="searchDiv">
                             <RoundedURLInput buttonAttach={false} inputReadOnly={true} url={this.state.url}/>
-                            캡처 중
+                            <div className="CaptureProgress">캡처 중</div>
                         </div>
                         <div className="YoutubePreview">
                             <iframe src={this.state.embedUrl} allow="autoplay"/>

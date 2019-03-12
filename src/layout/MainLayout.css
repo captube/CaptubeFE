@@ -12,6 +12,13 @@
     width: 53.5%;
 }
 
+.MainLayout .LoadingLayout .searchDiv .CaptureProgress {
+    padding-top: 5pt;
+    font-size: 11.25pt;
+    color: #b5b5b5;
+    font-family: Arial;
+}
+
 .MainLayout .LogoComponent, .LoadingLayout {
     margin: 3%;
 }
@@ -27,7 +34,7 @@
 .MainLayout .captureOption .title {
     text-align: left;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 15pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -52,7 +59,7 @@
 .MainLayout .captureOption .optionItem .optionName {
     object-fit: contain;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 15pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -120,7 +127,7 @@
 
 .MainLayout .TipLayout .TipTitle {
     font-family: Arial;
-    font-size: 25px;
+    font-size: 15pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -132,7 +139,7 @@
 
 .MainLayout .TipLayout .TipText {
     font-family: YDIYGO310;
-    font-size: 20px;
+    font-size: 11.25pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -152,7 +159,7 @@
 
 .MainLayout .RightLayout .SectionTitle {
     font-family: Arial;
-    font-size: 25px;
+    font-size: 15pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -203,7 +210,7 @@
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.75;
+
     letter-spacing: normal;
     text-align: left;
     color: #000000;
@@ -216,8 +223,8 @@
 }
 
 /*.MainLayout .RightLayout .NavigationSection .SectionContents div:hover ::after {*/
-    /*background-color: #03ab1f;*/
-    /*border-radius: 100%;*/
+/*background-color: #03ab1f;*/
+/*border-radius: 100%;*/
 /*}*/
 
 .MainLayout .RightLayout .ButtonSection {
@@ -239,7 +246,7 @@
 
 .MainLayout .RightLayout .OptionList .Option .OptionName {
     font-family: Arial;
-    font-size: 25px;
+    font-size: 15pt;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -250,9 +257,9 @@
 
 .MainLayout .RightLayout .ButtonSection .Button {
     cursor: pointer;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 20px;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    font-size: 15pt;
     width: 45%;
     margin: 3%;
     font-weight: normal;
