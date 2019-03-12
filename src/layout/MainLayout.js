@@ -121,8 +121,8 @@ class MainLayout extends Component {
                                 </div>
                                 <div className="Button" onClick={(event) => {
                                     let zip = new JSZip();
-                                    this.state.imgs.map((img) => {
-                                        zip.add(img.fileName, img.data, {base64: true});
+                                    this.state.imgs.map((img,index) => {
+                                        zip.add("captube"+index+".jpg", img.data, {base64: true});
                                     });
                                     let link = document.createElement("a");
                                     let content = zip.generate();
