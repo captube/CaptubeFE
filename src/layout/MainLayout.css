@@ -282,3 +282,9 @@
     margin-top: 1%;
     display: block;
 }
+
+.ContactUS {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}

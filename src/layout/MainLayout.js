@@ -6,6 +6,7 @@ import ToggleButton from "../component/ToggleButton";
 import captureButtonSVG from '../res/capture.svg';
 import youtubeBG from "../res/bg_youtube.png";
 import JSZip from "../lib/jszip";
+import ContactUS from "../component/ContactUS";
 
 class MainLayout extends Component {
 
@@ -32,6 +33,7 @@ class MainLayout extends Component {
                 <div className="MainLayout">
                     <div className="InitLayout">
                         <LogoComponent/>
+                        <ContactUS/>
                         <div className="searchDiv">
                             <RoundedURLInput buttonAttach={true} onButtonClick={(url) => {
                                 this.requestImage(url);
@@ -58,6 +60,7 @@ class MainLayout extends Component {
                 <div className="MainLayout">
                     <div className="LoadingLayout">
                         <LogoComponent/>
+                        <ContactUS/>
                         <div className="searchDiv">
                             <RoundedURLInput buttonAttach={false} inputReadOnly={true} url={this.state.url}/>
                             <div className="CaptureProgress">캡처 중</div>
@@ -75,6 +78,7 @@ class MainLayout extends Component {
                     <div className="ResultLayout">
                         <div className="TopLayout">
                             <LogoComponent/>
+                            <ContactUS/>
                             <div className="searchDiv">
                                 <RoundedURLInput buttonAttach={true} url={this.state.url} onButtonClick={(url) => {
                                     this.requestImage(url);
