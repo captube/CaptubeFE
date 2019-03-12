@@ -15,24 +15,27 @@ class RoundedURLInput extends Component {
             onButtonClick: props.onButtonClick,
             url: inputURL,
             inputReadOnly: inputReadOnly
-        }
+        };
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
         let inputURL = nextProps.url ? nextProps.url : "";
         let inputReadOnly = nextProps.inputReadOnly ? nextProps.inputReadOnly : false;
 
-        this.state = {
+        this.setState({
             buttonAttach: nextProps.buttonAttach,
             onButtonClick: nextProps.onButtonClick,
             url: inputURL,
             inputReadOnly: inputReadOnly
-        }
+        });
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return true;
     }
 
     render() {
-        let input = null;
-
         if (this.state.buttonAttach)
             return (
                 <div className="RoundedURLInput">
@@ -41,7 +44,8 @@ class RoundedURLInput extends Component {
                             if (event.keyCode == 13) {
                                 ;
                             }
-                        }} type="url" placeholder="CTRL+V URL" value={this.state.inputURL} readOnly={this.state.inputReadOnly}></input>
+                        }} onChange={e => this.setState({text: e.target.value})} defaultValue={this.state.url}
+                               type="url" placeholder="CTRL+V URL" readOnly={this.state.inputReadOnly}></input>
                         <div className="captureBtnDiv" onClick={() => {
                             let inputElem = document.querySelector(".RoundedURLInput .searchBarWrapper input");
                             this.state.url = inputElem.value;
@@ -60,7 +64,8 @@ class RoundedURLInput extends Component {
                             if (event.keyCode == 13) {
                                 window.location.href = '/search/' + event.target.value;
                             }
-                        }} type="url" placeholder="CTRL+V URL" value={this.state.inputURL} readOnly={this.state.inputReadOnly}></input>
+                        }} onChange={e => this.setState({text: e.target.value})} defaultValue={this.state.url}
+                               type="url" placeholder="CTRL+V URL" readOnly={this.state.inputReadOnly}></input>
                     </div>
                 </div>
             );

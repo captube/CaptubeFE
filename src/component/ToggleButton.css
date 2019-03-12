@@ -27,24 +27,24 @@
     transition: .4s;
 }
 
-.ToggleButton .slider:after {
+.ToggleButton input + .slider:after {
     position: absolute;
     content: "";
     height: 32px;
     width: 32px;
     right: 0px;
     bottom: 0px;
-    background-color: white;
+    background-color: #c7c7c7;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 .ToggleButton input:checked + .round:after {
-    background-color: #c7c7c7;
+    background-color: #cecece;
 }
 
 .ToggleButton input:focus + .slider {
-    box-shadow: 0 0 1px #c7c7c7;
+    box-shadow: 0 0 1px #cecece;
 }
 
 .ToggleButton input:checked + .slider:after {
