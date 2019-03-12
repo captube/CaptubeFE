@@ -42,7 +42,8 @@ class RoundedURLInput extends Component {
                     <div className="searchBarWrapper">
                         <input onKeyDown={async (event) => {
                             if (event.keyCode == 13) {
-                                ;
+                                let captueBtn = document.getElementsByClassName("captureBtnDiv")[0];
+                                captueBtn.click();
                             }
                         }} onChange={e => this.setState({text: e.target.value})} defaultValue={this.state.url}
                                type="url" placeholder="CTRL+V URL" readOnly={this.state.inputReadOnly}></input>
@@ -61,9 +62,6 @@ class RoundedURLInput extends Component {
                 <div className="RoundedURLInput">
                     <div className="searchBarWrapper">
                         <input onKeyDown={async (event) => {
-                            if (event.keyCode == 13) {
-                                window.location.href = '/search/' + event.target.value;
-                            }
                         }} onChange={e => this.setState({text: e.target.value})} defaultValue={this.state.url}
                                type="url" placeholder="CTRL+V URL" readOnly={this.state.inputReadOnly}></input>
                     </div>
