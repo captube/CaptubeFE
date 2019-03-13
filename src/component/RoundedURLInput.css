@@ -33,14 +33,15 @@
     width: 99%;
     height: 50px;
     -webkit-tap-highlight-color: transparent;
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: center;
+    font-family: SegoeUI;
+    font-size: 15pt;
+    text-align: left;
+    color: #707070;
 }
 
 .RoundedURLInput .searchBarWrapper input::placeholder {
     font-family: Roboto;
-    font-size: 25px;
+    font-size: 15pt;
     text-align: center;
     color: #f1f1f1;
 }

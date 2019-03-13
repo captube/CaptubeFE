@@ -4,7 +4,9 @@ import './LogoComponent.css';
 class LogoComponent extends Component {
     render() {
         return (
-            <div className="LogoComponent">
+            <div className="LogoComponent" onClick={() => {
+                window.location = "/";
+            }}>
                 <div className="CapDiv">
                     CAP
                 </div>
