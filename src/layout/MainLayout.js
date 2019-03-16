@@ -162,7 +162,8 @@ class MainLayout extends Component {
                                                          let timeStamp = ev.target.getAttribute("timestamp");
                                                          let min = Math.floor(timeStamp / 60);
                                                          let sec = timeStamp % 60;
-                                                         window.open(this.state.url+"&t="+min+"m"+sec+"s");
+                                                         let linkUrl = (this.state.url).lastIndexOf("?") == -1 ? this.state.url+"?t="+min+"m"+sec+"s" : this.state.url+"&t="+min+"m"+sec+"s"
+                                                         window.open(linkUrl);
                                                      }
                                                      }/>);
                                     }
