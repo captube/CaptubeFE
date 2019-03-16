@@ -1,0 +1,290 @@
+.MainLayout .InitLayout, .LoadingLayout {
+    margin-top: 10%;
+}
+
+.MainLayout .InitLayout .searchDiv {
+    margin-left: 24.5%;
+    width: 53.5%;
+}
+
+.MainLayout .LoadingLayout .searchDiv {
+    margin-left: 23.25%;
+    width: 53.5%;
+}
+
+.MainLayout .LoadingLayout .searchDiv .CaptureProgress {
+    padding-top: 5pt;
+    font-size: 11.25pt;
+    color: #b5b5b5;
+    font-family: Arial;
+}
+
+.MainLayout .LogoComponent, .LoadingLayout {
+    margin: 3%;
+}
+
+.MainLayout .captureOption {
+    text-align: center;
+    width: 34%;
+    padding: 1%;
+    margin-left: 33%;
+    margin-top: 12%;
+}
+
+.MainLayout .captureOption .title {
+    text-align: left;
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    color: #b5b5b5;
+}
+
+.MainLayout .captureOption .optionList {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top: 2px solid #dfe1e5;
+    border-bottom: 2px solid #dfe1e5;
+}
+
+.MainLayout .captureOption .optionList .optionItem {
+    overflow: hidden;
+}
+
+.MainLayout .captureOption .optionItem .optionName {
+    object-fit: contain;
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    letter-spacing: normal;
+    float: left;
+    color: #8d8d8d;
+}
+
+.MainLayout .captureOption .optionItem .toggleButton {
+    float: right;
+}
+
+.MainLayout .YoutubePreview {
+    width: 80%;
+    height: 70%;
+    left: 9%;
+    padding: 1%;
+    margin-top: 5%;
+    position: absolute;
+}
+
+.MainLayout .YoutubePreview img {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.MainLayout .YoutubePreview iframe {
+    z-index: 1;
+    border: none;
+    width: 80%;
+    height: 75%;
+    top: 16%;
+    left: 10%;
+    position: absolute;
+}
+
+.MainLayout .ResultLayout .TopLayout {
+    position: fixed;
+    width: 80%;
+    top: 0;
+}
+
+.MainLayout .ResultLayout .TopLayout div {
+    float: left;
+}
+
+.MainLayout .ResultLayout .RoundedURLInput {
+    width: 50%;
+    height: 5%;
+    margin-top: 3%;
+}
+
+.MainLayout .TipLayout {
+    width: 400px;
+    border-radius: 6px;
+    background-color: #ffe22c;
+    position: fixed;
+    left: 3%;
+    bottom: 3%;
+}
+
+.MainLayout .TipLayout .TipTitle {
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #650000;
+    margin: 10px;
+}
+
+.MainLayout .TipLayout .TipText {
+    font-family: YDIYGO310;
+    font-size: 11.25pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #650000;
+    margin: 10px;
+}
+
+.MainLayout .RightLayout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 3%;
+    width: 30%;
+}
+
+.MainLayout .RightLayout .SectionTitle {
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 3%;
+    color: #b5b5b5;
+}
+
+.MainLayout .RightLayout .ClipSection, .OptionSection, .NavigationSection {
+    width: 100%;
+    height: 170.5px;
+    margin-top: 1%;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.MainLayout .ClipSection .SectionContents {
+    padding-left: 3%;
+    font-family: YDIYGO310;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00070a;
+}
+
+.MainLayout .RightLayout .NavigationSection {
+    height: 255.75pt;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.MainLayout .RightLayout .NavigationSection::-webkit-scrollbar {
+    display: none;
+}
+
+.MainLayout .RightLayout .NavigationSection .SectionContents div {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 3%;
+    object-fit: contain;
+    font-family: YDIYGO310;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.MainLayout .RightLayout .NavigationSection .SectionContents div:hover {
+    cursor: pointer;
+    text-decoration: underline #03ab1f solid;
+    /*text-underline-position: under;*/
+}
+
+/*.MainLayout .RightLayout .NavigationSection .SectionContents div:hover ::after {*/
+/*background-color: #03ab1f;*/
+/*border-radius: 100%;*/
+/*}*/
+
+.MainLayout .RightLayout .ButtonSection {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.MainLayout .RightLayout .OptionList .Option div {
+    float: left;
+}
+
+.MainLayout .RightLayout .OptionList .Option .ToggleButton {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.MainLayout .RightLayout .OptionList .Option .OptionName {
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b5b5b5;
+}
+
+.MainLayout .RightLayout .ButtonSection .Button {
+    cursor: pointer;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    font-size: 15pt;
+    width: 45%;
+    margin: 3%;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    font-family: Arial;
+    color: #ffffff;
+    background-color: #00B800;
+    border-radius: 15px;
+}
+
+.MainLayout .ImageSection {
+    margin-top: 10%;
+}
+
+.MainLayout .ImageSection .CaptureImage {
+    cursor: pointer;
+    width: 43%;
+    margin-left: 25%;
+    margin-top: 1%;
+    display: block;
+}
+
+.ContactUS {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
